@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>선택자 기본편</title>
+        <style> /* 스타일이 겹칠 경우에는 제일 마지막에 입력된 스타일을 따른다 */
+            * /* {
+                color: red;
+            }
+            li{
+                color:blue
+            }
+            li.hiphop{      /* li tag의 hiphop의 클래스이라는 뜻 */
+                color:purple
+            }
+            li#poppin{ /* li tag의 poppin의 id 만! */
+                color:brown
+            } 
+            */
+
+            h2, p, li{
+                color: yellow;
+            }
+            
+            /*
+             선택자에서도 우선 순위가 있다.
+                1. 아이디 선택자
+                2. 클래스 선택자
+                3. 태그 선택자
+             3가지의 순서를 따르고, 그 이후에 아래의 순위가 우선순위가 된다.
+             */
+
+        </style>
+    </head>
+    <body>
+        <h2>춤의 장르</h2>
+        <ul>
+            <li class="hiphop">비보잉</li>
+            <li class="hiphop" id="poppin">팝핀</li>
+            <li class="hiphop">락킹</li>
+            <li id="belly">벨리</li>
+            <li id="jazz">재즈</li>
+        </ul>
+    </body>
+</html>

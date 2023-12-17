@@ -1,0 +1,44 @@
+<!--
+    <select>는 다수의 <option> 태그를 통해 선택 메뉴를 만든다.
+    <input> 태그는 1줄의 텍스트만 입력가능.
+    <textarea>를 통해 여러 줄의 텍스트를 입력받을 수 있다.
+    cols(가로 글자수), rows(세로 글자수)
+    <progress>를 통해서 작업이 진행되었는지를 나타낸다.
+    <button>태그는 클릭을 입력을 받는 태그
+    <input>에서 type에서 button으로 지정해서 버튼 생성가능
+    
+-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Input이외의 입력 태그</title>
+    </head>
+    <body>
+        <fieldset>
+        <legend>음료 주문</legend>
+        <h2><b>음료를 고르세요</b></h2>
+        <select multiple size="5">
+            <option value="champagne">샴페인</option>
+            <option value="beer">맥주</option>
+            <option value="sake">니혼슈</option>
+            <option value="soju" selected>소주</option>
+        </select>
+
+        <hr>
+        <h2>기타 음료를 자유롭게 작성하시오</h2>
+        <textarea cols="10" rows="2"></textarea>
+        </fieldset>
+
+        <hr>
+        <h2>현재 준비 상태입니다</h2>
+        <progress max="100" value="70"></progress>
+
+        <hr>
+        <h2>추가 용무가 있으면 호출해주세요</h2>
+        <button>호출</button>
+        <input type="button" value="호출">
+    </body>
+</html>

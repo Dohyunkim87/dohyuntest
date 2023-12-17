@@ -1,0 +1,36 @@
+<!--
+    입력 양식을 만들어주는 <form> 태그는 사용자가 입력한 데이터를 서버로 보낸다
+    로그인, 회원가입, 검색어 입력 등 다양한 입력 페이지가 있다.(폼태그)
+    <form>은 입력 요소들을 감싸며, 입력 값을 서버로 submit가능
+    <form>안에 입력 태그들을 포함시키면, 입력 요소들은 양식의 개별 항목으로 역할을 수행
+    단순히는 되지 않고, 아래의 속성들이 필요하다
+    action : 입력값을 전송할 서버의 url
+    method : 클라이언트가 입력한 데이터를 어떤식으로 전송할지(GET or POST)
+    GET : 서버에 요청을 보내어 응답을 받아낸다
+    POST : 서버에 요청을 보내어 작업을 수행한다. (서버의 정보를 조작)
+    id로 사람이 코드를 보면서 구분을 했다면, input 속성내에 id도 입력
+    하지만 name를 이용하여 서버가 인지할 수 있도록 입력해주는 것도 중요하다
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>양식 만들고 정보 보내기</title>
+    </head>
+    <body>
+        <form action="none.com" method="post">
+
+            <label for="name">이름</label>
+            <input id="name" type="text" name="name">
+            <br>
+            <label for="age">나이</label>
+            <input id="age" type="text" name="age">
+            <br>
+            <label for="character">성격</label>
+            <textarea id="character" name="character"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

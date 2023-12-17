@@ -1,0 +1,28 @@
+*{
+    text-align:center;
+}
+
+html{
+    background-color: #B3A194
+    font-size:16 px;
+}
+
+body{
+    width: 640px;
+    margin: auto;   /* 너비에서 남는 여백을 동일하게 분배하는 것 */
+}
+
+h1{
+    font-size: 48px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px
+}
+
+p{
+    font-size: 1.2rem;
+    font-family: 'Gasoek One', sans-serif;
+}

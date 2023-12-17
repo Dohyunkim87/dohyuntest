@@ -1,0 +1,91 @@
+<!-- 행: 가로, 열: 세로 -->
+<!--
+    <table> : 하나의 표를 나타내는 태그
+    <tr> : 표 안에서 하나의 행을 나타내는 태그
+    <th> : 행 안에서 제목에 해당하는 셀을 나타내는 태그
+    <td> : 행 안에서 콘텐츠에 해당하는 셀을 나타내는 태그
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Table making</title>
+    </head>
+    <body>
+         <table border="1"> <!-- border는 테두리의 두께 -->
+            <caption>
+                List of Marathon runner <!-- 캡션은 제목, 설명 등, 기본은 가운데 정렬 -->
+            </caption>
+            <thead>
+            <tr>
+                <th>Korean</th>
+                <th>Japanese</th>
+                <th>American</th>
+            </tr>
+            </thead>
+            <tbody>    
+            <tr>
+                <td>Chulsu</td>
+                <td>Otsuka</td>
+                <td>James</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>World rank 5th</td>
+                <td>World rank 8th</td>
+                <td>World rank 2nd</td>
+            </tr>
+            </tfoot>
+         </table>
+    </body>
+</html>
+
+<!-- 
+    <thead> 표의 제목이나 주제를 나타내는 영역
+    <tbody> 표의 본문을 나타내는 영역
+    <tfoot> 표의 요약글이나 맺음말을 나타내는 영역
+-->
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Table making practice</title>
+    </head>
+    <body>
+        <table border="3">
+            <caption>
+                List of Marathon runner
+            </caption>
+            <thead>
+            <tr>
+                <th>Korean</th>
+                <th>Japanese</th>
+                <th>American</th>
+            </tr>
+            </thead>
+            <tbody>    
+            <tr>
+                <td>Chulsu</td>
+                <td>Otsuka</td>
+                <td>James</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>World rank 5th</td>
+                <td>World rank 8th</td>
+                <td>World rank 2nd</td>
+            </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

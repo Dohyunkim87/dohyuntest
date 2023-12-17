@@ -1,0 +1,50 @@
+<!--
+    콘텐츠와 어울리는 적절한 배경을 추가함으로써 콘텐처를 더욱 돋보이게 만들 수 있다.
+    접미사를 통해서 지정
+    -color : 색상
+    -clip : 배경의 적용 범위
+    -image : 이미지 url
+    -origin : 배경의 시작 위치
+    -size : 배경이미지의 크기
+    -position : 배경 이미지의 위치
+    -repeat : 배경의 반복여부
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>스타일 기본</title>
+        <style>
+            div{
+                width: 300px;
+                height: 300px;
+                padding: 20px;
+                border: 20px double green;
+                
+                /* background-color: yellowgreen; */
+                background-clip: border-box;
+                /* 
+                    border-box: 경계선까지
+                    padding-box: 패딩까지
+                    content-box: 콘텐츠영역에서만
+                */
+                background-image: url(..//1회차/images/2.jpg);
+                background-size: 150px 150px;
+                background-repeat: no-repeat;
+                background-origin: content-box;
+                background-position: 0px 0px
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

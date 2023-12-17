@@ -1,0 +1,47 @@
+<!--
+    여백의 안쪽, 바깥쪽은 테두리를 기준으로 정해진다
+    margin - border - padding - content
+    margin; px px px px 로 사용
+    1개 : 여백의 모든 면에 동일한 값
+    2개 : 위아래 여백, 왼오여백 각각 지정
+    3개 : 윗 여백, 왼오여백, 아래 여백 각각 지정
+    4개 : 모든 여백 각각 지정
+    
+    width, height사용 시 콘텐츠 영역의 크기가 결정된다 padding 속성을 사용하면 요소가 커진다
+    이를 원치 않으면 box-sizing을 통해서 
+    content-box(기본) : 사이즈가 커짐
+    border-box(padding 사이즈 포함) : 콘텐츠 영역이 줄어들면서 보더 사이즈가 정해짐
+-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>여백다루기</title>
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+
+                margin: 10px 20px 30px 40px;
+                /* 접미사를 사용해서 지정*/
+                padding-top: 20px;
+                padding-right: 50px;
+
+                box-sizing: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>        
+    </body>
+</html>

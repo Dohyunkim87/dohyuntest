@@ -1,0 +1,50 @@
+<!-- 
+    웹화면에 사용자들로부터 입력을 받을 수 있도록 하는 태그들 교육 
+    대표 주자는 <input>
+    단일 태그이며 <input type="데이터 유형">
+    Text를 입력받는 type의 예) text, email, password, search, date...
+    수치(숫자)를 입력받는 type의 예) color, number, range
+    <label> 태그를 이용해서 팻말을 붙여서 제작하는 것이 가독성이 좋다
+-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Inpput</title>
+    </head>
+    <body>
+        <h1><b>Login</b></h1>
+        <label>
+            ID
+            <input
+            type="text" id="ID" placeholder="Input your ID">
+        </label>
+        <br>
+        <label>Password</label>
+        <input
+        type="password" id="pw" placeholder="Input your password">
+
+
+        <hr>
+        <input type="color">
+
+        <hr>
+        <input type="number"> <!-- 스피너가 추가됨(숫자선택) -->
+
+        <hr>
+        <input type="range">
+
+        <hr>
+        <label>
+        <input type="checkbox"> 제육볶음
+        </label>
+        <label>
+        <input type="checkbox"> 돈까스
+        </label>
+        <label>
+        <input type="checkbox"> 국밥
+        </label>
+    </body>
+</html>
