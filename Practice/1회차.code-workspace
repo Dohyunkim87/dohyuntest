@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../1회차"
+		},
+		{
+			"path": "../2회차"
+		},
+		{
+			"path": "../3회차"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Studio-Code"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Practice"
+	}
+}
