@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(222, 153, 41);
+  }
+  
+  .gnb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: auto;
+  }
+  
+  .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+  }
+  
+  .day {
+    width: 140px;
+    text-align: left;
+    border-right: 2px solid black;
+  }
+  
+  .weather {
+    width: 300px;
+  }
+  
+  .border {
+    border: 2px solid black;
+  }
+  
+  .main {
+    background-color: white;
+  }
+  
+  .main-title {
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  img {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .table {
+    background-color: white;
+    width: 50%;
+  }
+  
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50px;
+    text-align: center;
+  }
