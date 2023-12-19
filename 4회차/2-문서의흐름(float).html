@@ -1,0 +1,47 @@
+<!--
+    웹 요소들이 표시되는 순서는 기본적으로 html 문서내에서 약속되어진 룰에 의해 흘러간다
+    일반적으로는 왼쪽->오른쪽의 반복적으로 흐름이 기본이다
+    float를 이용하면 요소를 원하는 방향으로 흐름과 무관하게 배치할 수 있다.
+    float 속성을 적용한 요소를 부동(띄움) 요소라 부른다.
+    float를 이용해 
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>문서의 흐름</title>
+        <style>
+            .container{
+                height: 400px;
+                border: 1px solid black;
+            }
+            
+            #first{
+                float:right ;
+            }
+
+            #second{
+                float:right ;
+            }
+            p{
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img id="first" src="..//1회차/images/2.jpg" width="350">
+            <img id="second" src="..//1회차/images/2.jpg" width="350">
+            <p>귀여운 고양이 입니다.<br>너무나 귀엽죠?</p>
+        </div>
+        
+    </body>
+</html>

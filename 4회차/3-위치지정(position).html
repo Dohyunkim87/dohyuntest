@@ -1,0 +1,65 @@
+<!-- 
+    position이 문서상에 요소를 배치하는 방법을 정의한다
+    position이 요소의 배치 방법을 결정하면
+    top, right, bottom, left(각 위치에서 떨어뜨릴 것)을 이용해서 정확한 위치 지정
+    
+    position은 4가지 유형으로 이동함
+    static : 기본 값으로 문서의 흐름에 맞춰 배치함
+    relative : 문서의 흐름에 맞춰 배치된 위치에서 이동
+    absolute : position이 지정된 상위 요소를 기준으로 이동시킴 (문서의 기본 흐름 무시)
+    fixed : 화면을 기준으로 요소의 위치를 고정함
+ -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>위치 지정하기</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: orange;
+            }
+            .rel{
+                background-color: red;
+                position: relative;
+                top: 50px;
+                left: 50px;
+            }
+            .abs{
+                /*
+                 앱솔루트 요소는 position 속성을 가진 요소를 기준으로 이동
+                 단 상위 요소 중에 position 속성을 가진 요소가 없다면 화면을 기준으로 이동
+                */
+                background-color: green;
+                position: absolute;
+                top: 50px;
+                right: 50px;                
+            }
+            .scroll{
+                height: 2000px;
+            }
+            .fixed{
+                position: fixed;
+                top: 50px;
+                right: 550px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="abs">1</div>
+        <div class="rel">2</div>
+        <div class="scroll">3</div>
+        <div class="fixed">4</div>
+    </body>
+</html>

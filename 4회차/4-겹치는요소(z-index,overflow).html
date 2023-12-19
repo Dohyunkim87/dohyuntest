@@ -1,0 +1,109 @@
+<!-- 
+    z-index는 여러가지 요소가 겹칠 경우에 쌓임 순서를 정의할 수 있다.
+    이는 위치지정요소(position이 정의되어 있는 요소)에 적용할 수 있다.
+    요소는 내부 콘텐츠의 크기에 따라서 조절될 수 있지만, 만일 요소의 크기가 지정된 상황이고
+    콘텐츠가 너무 많으면 overflow를 통해서 조절 할 수 있다,
+    overflow
+    visible: 기본값으로 영역을 벗어냐도 그냥 보여준다
+    hidden: 영역을 벗어난 콘텐츠를 잘라내어 보이지 않게 한다
+    scroll: 영역을 벗어난 콘텐츠를 잘라내어 보이지 않게 하지만, 콘텐츠 진행방향으로 스크롤을 만든다
+    auto: 웹 브라우저의 설정 값을 따름
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>스타일 기본</title>
+        <style>
+            /* div{
+                width:100px;
+                height:100px;
+                position:relative;
+            }
+            .first{
+                background-color: teal;
+                z-index:4 ;
+            }
+            .second{
+                background-color: orangered;
+                bottom:50px;
+                z-index: 3;
+            }
+            .third{
+                background-color: purple;
+                bottom:100px;
+                z-index: 2;
+            }
+            .fourth{
+                background-color: tomato;
+                bottom:150px;
+                z-index: 1;
+            } */
+
+            div{
+                width: 100px;
+                height: 100px;
+                position: relative;
+            }
+            .div1{
+                background-color: orange;z-index:4;overflow: auto;
+            }
+            .div2{
+                background-color: red; bottom: 50px;z-index:3;overflow: scroll;
+            }
+            .div3{
+                background-color: green; bottom: 100px;z-index:2;overflow: hidden;
+            }
+            .div4{
+                background-color: purple; bottom: 150px;z-index:1;overflow: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="first">페</div>
+        <div class="second">스</div>
+        <div class="third">츄</div>
+        <div class="fourth">리</div> -->
+        <div class="div1">
+            orangeorangeorangeorange
+            orangeorangeorangeorange
+            orangeorangeorangeorange
+            orangeorangeorangeorange
+            orangeorangeorangeorange
+            orangeorangeorangeorange
+            orangeorangeorangeorange
+        </div>
+        <div class="div2">
+            redredredredredredredred
+            redredredredredredredred
+            redredredredredredredred
+            redredredredredredredred
+            redredredredredredredred
+            redredredredredredredred
+        </div>
+        <div class="div3">
+            greengreengreengreengreengreen
+            greengreengreengreengreengreen
+            greengreengreengreengreengreen
+            greengreengreengreengreengreen
+            greengreengreengreengreengreen
+            greengreengreengreengreengreen
+            greengreengreengreengreengreen
+        </div>
+        <div class="div4">
+            purplepurplepurplepurplepurple
+            purplepurplepurplepurplepurple
+            purplepurplepurplepurplepurple
+            purplepurplepurplepurplepurple
+            purplepurplepurplepurplepurple
+        </div>
+    </body>
+</html>

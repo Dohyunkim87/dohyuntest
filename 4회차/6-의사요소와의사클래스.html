@@ -1,0 +1,85 @@
+<!-- 
+    의사클래스
+    ex) h1:hover {color:red;} h1에 hover(커서가 올라오면) 빨간색으로 바뀐다
+    hover : 마우스 포인터가 요소 위에
+    active : 마우스 누르는 등 사용자가 요소를 활성화 함
+    focus : 요소가 포커스를 받고 있다. 입력창에 커서(키보드) 등이 올라가 사용가능 상태
+    disabled : 비활성 상태의 요소들
+    nth-child() : 형제 사이에서의 순서에 따라 요소를 선택
+
+    의사요소
+    선택한 요소에 특정 부분에 대한 스타일 정의
+    ex) li::first-letter {font-size:20px;} li요소에서 첫번째 글자를 20픽셀로
+    after : 요소의 앞
+    before : 요소의 뒤
+    first-line : 첫째 줄
+    marker : 목록 기호의 스타일
+    placeholder : 자리표시자의 스타일
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>의사클래스</title>
+        <style>
+           .menu{
+            padding: 10px;
+            border-bottom: 1px solid black;
+            align-items: center;
+           }
+           .menu > li {
+                display: inline-block;
+            }
+            li>a{
+                display: inline-block;
+                width: 80px;
+                padding: 10px;
+                text-decoration: none;
+            }
+
+            a:hover{
+                color: white;
+                background-color: gray;
+            }
+
+            a:active{
+                color: white;
+                background-color: black;
+            }
+
+            li:nth-child(2n-1) {
+                font-size: 20px;
+            }
+
+            a:first-letter {
+                font-size:30px ;
+            }
+            
+            a:after {
+                content: "보기";
+                color : purple;
+            }
+            
+            a:before {
+                content: "!";
+                color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li><a href="#">사전</a></li>
+            <li><a href="#">뉴스</a></li>
+            <li><a href="#">증권</a></li>
+            <li><a href="#">지도</a></li>
+        </ul>
+    </body>
+</html>

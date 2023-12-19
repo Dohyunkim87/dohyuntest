@@ -1,0 +1,76 @@
+<!-- 
+    앞선 선택자 외에도 여러 선택자가 있다
+    속성 선택자 : 특정 속서을 명시하여 요소를 선택 (대괄호이용)
+    하위 요소 선택자 : 상위 요소에 포함된 하위 요소를 선택 (공백)
+    자식 요소 선택자 : 상위 요소 바로 한단계 하위요소 (>)
+    인접 형제 선택자 : 형제 요소 중 첫 번째 형제 요소 (+)
+    형제 요소 선택자 : 형제 요소를 선택 (~)
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>스타일 기본</title>
+        <style>
+            /* 
+                기호와 함께 사용하는 속성 선택자
+                * : 값의 포함 여부
+                ^ : 값의 시작 여부
+                $ : 값의 끝 여부
+             */
+            img[alt]  {
+                border: 5px dashed red;
+            }
+            [width *="2"] {
+                height:150px;
+            }
+            [width ^="1"] {
+                border-radius:50% ;
+            }
+            [width $="3"] {
+                border-color: aqua;
+            }
+
+            body p{
+                color:blue
+            }
+
+            body em{
+                color: red
+            }
+
+            body>em{
+                color: yellow
+            }
+
+            body>p{
+                text-shadow: 5px;
+            }
+            /* 
+                형제 선택자는 뒤이어 있는 경우에만 적용됨
+            */
+            #sam + p {
+                color: red;
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src="../1회차/images/2.jpg" width="120" alt="고양이">
+        <img src="../1회차/images/2.jpg" width="131">
+        <img src="../1회차/images/2.jpg" width="143" id="sam">
+        <p>고양이 넘나 귀여워</p>
+        <p>고양이 짱짱</p>
+        <p>고양이는 <em>주인님</em>이에요</p>
+        <p>집사야 날 모셔라</p>
+    </body>
+</html>
