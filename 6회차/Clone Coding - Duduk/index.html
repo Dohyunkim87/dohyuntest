@@ -1,0 +1,127 @@
+<!-- 
+    클론코딩을 할때는 구획을 나누는게 가장 중요하다
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>우리 동네에서 찾는 더덕알바</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="info.css">
+        <link rel="stylesheet" href="notice.css">
+        <link rel="stylesheet" href="banner.css">
+        <link rel="stylesheet" href="footer.css">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            html{
+                font-size: 16px;
+            }
+            body{
+                margin: 0;
+            }
+            .flex{
+                display: flex;
+            }
+            .main{
+                padding: 4rem 0 5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="header-content flex">
+                    <div class="header-content__logo">더덕마켓</div>
+                    <nav class="header-content__nav flex">
+                        <ul>
+                            <li>중고거래</li>
+                            <li>동네가게</li>
+                            <li class="active">알바</li>
+                            <li>부동산 직거래</li>
+                            <li>중고차</li>
+                        </ul>
+                    </nav>
+                    <div class="header-content__input flex">
+                        <span class="icon glass">
+                            <input type="button" value="&#128269;">
+                        </span>
+                        <span>
+                            <input type="text" class="search" placeholder="물품이나 동네를 검색해보세요.">
+                        </span>
+                        <span class="icon menu">
+                            <input type="button" value="&#9776;">
+                        </span>
+                        <span>
+                            <input type="button" class="chat" value="채팅하기">
+                        </span>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <section class="info">
+                    <div class="info__text">
+                        <h1>우리 동네에서 찾는<br>더덕알바</h1>
+                        <p>걸어서 10분 거리에<br>동네 알바 여기 다 있어요.</p>
+                    </div>
+                </section>
+                <section class="notice">
+                    <h2 class="notice__title">인기 더덕알바</h2>
+                    <div class="notice__container flex">
+                        <article class="notice__item flex">
+                            <div class="notice__thumb"></div>
+                            <div class="notice__content">
+                                <div class="notice__content__title">더덕마켓 고객센터 단기계약직 모집(1개월 단기)</div>
+                                <div class="notice__content__address">주식회사 더덕서비스 - 경기도 파주시</div>
+                                <div class="notice__content__pay">급여 3,000,000</div>
+                            </div>
+                        </article>
+                        <article class="notice__item flex">
+                            <div class="notice__thumb"></div>
+                            <div class="notice__content">
+                                <div class="notice__content__title">더덕마켓 고객센터 단기계약직 모집(1개월 단기)</div>
+                                <div class="notice__content__address">주식회사 더덕서비스 - 경기도 파주시</div>
+                                <div class="notice__content__pay">급여 3,000,000</div>
+                            </div>
+                        </article><article class="notice__item flex">
+                            <div class="notice__thumb"></div>
+                            <div class="notice__content">
+                                <div class="notice__content__title">더덕마켓 고객센터 단기계약직 모집(1개월 단기)</div>
+                                <div class="notice__content__address">주식회사 더덕서비스 - 경기도 파주시</div>
+                                <div class="notice__content__pay">급여 3,000,000</div>
+                            </div>
+                        </article><article class="notice__item flex">
+                            <div class="notice__thumb"></div>
+                            <div class="notice__content">
+                                <div class="notice__content__title">더덕마켓 고객센터 단기계약직 모집(1개월 단기)</div>
+                                <div class="notice__content__address">주식회사 더덕서비스 - 경기도 파주시</div>
+                                <div class="notice__content__pay">급여 3,000,000</div>
+                            </div>
+                        </article><article class="notice__item flex">
+                            <div class="notice__thumb"></div>
+                            <div class="notice__content">
+                                <div class="notice__content__title">더덕마켓 고객센터 단기계약직 모집(1개월 단기)</div>
+                                <div class="notice__content__address">주식회사 더덕서비스 - 경기도 파주시</div>
+                                <div class="notice__content__pay">급여 3,000,000</div>
+                            </div>
+                        </article><article class="notice__item flex">
+                            <div class="notice__thumb"></div>
+                            <div class="notice__content">
+                                <div class="notice__content__title">더덕마켓 고객센터 단기계약직 모집(1개월 단기)</div>
+                                <div class="notice__content__address">주식회사 더덕서비스 - 경기도 파주시</div>
+                                <div class="notice__content__pay">급여 3,000,000</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

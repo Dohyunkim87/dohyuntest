@@ -1,0 +1,46 @@
+<!-- 
+    4회차 프로젝트를 가지고 발전시킬예정
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>채팅방 만들기</title>
+        <link href="7-MiniProject.css" rel="stylesheet">
+        <link href="7-Text.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <main class="chat-screen">
+                <section class="chat-screen__bar">
+                    <div class="user">
+                        <div class="user__column">
+                            <div class="user__pic"></div>
+                        </div>
+                        <div class="user__column">
+                            <p class="user__nick">친구</p>
+                            <p class="user__count">2</p>
+                        </div>
+                    </div>
+                </section>
+                <ul class="chat-screen__texts">
+                    <li class="text">언제 밥먹자</li>
+                    <li class="text">안먹쥬 킹킹삐리빠라뽕쥬</li>
+                </ul>
+            </main>
+
+            <form class="chat-form">
+                <section class="chat-form__field">
+                    <textarea class="chat-form__msg"></textarea>
+                    <input type="submit" value="전송" class="chat-form__but">
+                </section>
+            </form>
+        </div>
+    </body>
+</html>

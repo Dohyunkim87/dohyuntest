@@ -1,0 +1,36 @@
+<!-- 
+    반응형 웹이란, 다양한 기기나 브라우저의 크기에 맞게 구성이나 크기를 변경해가며 반응하는 웹문서
+    뷰포트는 현재 화면에 보여지는 영역
+    기기별로 뷰포트가 다르기 때문에 동일 웹페이지라도 모니터나 기기별로 배율조정이 필요하다.
+    <meta 
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    
+    뷰포트 크기를 기반으로 값을 계산하여 크기를 결정
+    vw : 뷰포트 너비 1/100, vh : 뷰포트 높이의 1/100
+    vmin : 뷰포트 너비/높이 중 작은 쪽의 1/100, vmax : 뷰포트 너비/높이 중 큰 쪽의 1/100
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        
+        <title>반응형 웹과 뷰포트</title>
+        <style>
+            p{
+                margin: 0;
+                font-size: 10vmax;
+            }
+        </style>
+    </head>
+    <body>
+        <p>명탐정 코난 - 1권</p>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: aqua;
+}
+.mainscreen{
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    list-style: none;
+    
+}
+
+.pc{
+    display: block}
+.ipad{
+    display: none}
+.note{
+    display: none}
+.folder{
+    display: none}
+.phone{
+    display: none}
+
+@media screen and (max-width: 1000px){
+    body{
+        background-color: red;
+    }
+    .pc{
+        display: block}
+    .ipad{
+        display: none}
+    .note{
+        display: none}
+    .folder{
+        display: none}
+    .phone{
+        display: none}
+                 
+}
+
+@media screen and (max-width: 900px){
+    body{
+        background-color: yellow;
+    }
+    .pc{
+        display: none}
+    .ipad{
+        display: block}
+    .note{
+        display: none}
+    .folder{
+        display: none}
+    .phone{
+        display: none}
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-color: green;
+    }
+    .pc{
+        display: none}
+    .ipad{
+        display: none}
+    .note{
+        display: block}
+    .folder{
+        display: none}
+    .phone{
+        display: none}
+}
+
+@media screen and (max-width: 700px){
+    body{
+        background-color: blueviolet;
+    }
+    .pc{
+        display: none}
+    .ipad{
+        display: none}
+    .note{
+        display: none}
+    .folder{
+        display: block}
+    .phone{
+        display: none}
+}
+
+@media screen and (max-width: 600px){
+    body{
+        background-color: moccasin;
+    }
+    .pc{
+        display: none}
+    .ipad{
+        display: none}
+    .note{
+        display: none}
+    .folder{
+        display: none}
+    .phone{
+        display: block}
+}

@@ -1,0 +1,86 @@
+<!-- 
+    웹 요소에는 변형을 적용할 수 있다.
+    변형은 요소의 크기나 위치를 바꾸는 것을 뜻하는데, 이때 크기나 위치는 요소의 x/y축을 기준으로 바꾼다
+    translate(x,y) : 지정한 크기만큼 x/y축으로 이동
+    scale(x,y) : 지정한 크기만큼 x/y축으로 확대/축소
+    skew(x,y) : 지정한 각도만큼 x/y축으로 비틀어 왜곡
+    rotate(deg) : 지정한 각도만큼 회전
+    
+    transform 속성은 좌표 평면에서 단순한 형태의 변형
+    transition 속성을 이요하면 시간이나 변화 속도등도 제어가 가능해 애니메이션 효과가 부여가능
+    transition는 단축속성으로 속성, 시간, 방법, 지연시간 등 정보를 포함할 수 있음
+    -property : 변화 대상 속성 지정
+    -duration : 변화 실행될 시간
+    -delay : 변화 시작 전 지연 시간
+    -timing-function : 변화 실행 시 변화 실행 속도를 제어
+    transition-timing-function?
+    duration 동안 변화가 일어나게 할 수 있음
+    ease : 기본값으로 점점 속도가 빨라지다가 다시 느려지는 방식
+    linear : 처음부터 끝까지 동일한 속도로
+    ease-in : 느리게 시작했다가 점점 빨라짐
+    ease-out : 빠르게 시작했다가 점점 느려짐
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>변형과 전환</title>
+        <style>
+            .parent{
+                display: inline-block;
+                margin: 0 20px;
+            }
+
+            .child{
+                width:150px;
+                height:150px;
+                background-color:teal;
+
+            }
+            
+            /* .parent:nth-child(1) > .child{
+                transform: translate(30px,50px);}
+            .parent:nth-child(2) > .child{
+                transform: scale(1, 1.5);} /* x축으로 x배, y축으로 y배 증감 */
+            /* .parent:nth-child(3) > .child{
+                transform: skew(35deg);} /* deg만큼 비튼다. 결과 예측이 쉽지 않아 잘쓰이지않음 */
+            /* .parent:nth-child(4) > .child{
+                transform: rotate(82deg);} /* deg만큼 회전 */
+            .parent:nth-child(4) > .child:hover{
+                width: 300px;
+                height: 300px;
+                background-color: orange;
+                /* transition-property: width;
+                transition-duration: 5s;
+                transition-delay: 0s;
+                transition-timing-function:ease-out; */
+                transition: background-color 2s 0s linear,
+                height 2s 0s linear,
+                width 2s 0s linear;
+            }
+                
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>

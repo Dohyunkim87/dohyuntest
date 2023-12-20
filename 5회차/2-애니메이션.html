@@ -1,0 +1,89 @@
+<!-- 
+    애니메이션은 움직이지 않는 물체를 움직이는 것 처럼 보이게 만드는 촬영기법/영화
+    @keyframes모듈과 animation 속성을 이용해서 만들 수 있다
+    키프레임은 백분율을 이용해서 프레임을 나누거나, 키워드로 나눌 수 있다.
+    @keyframes 애니메이션_이름 {
+        from{width:100px;} to {width:200px}
+    }
+     @keyframes 애니메이션_이름 {
+        0%{width:100px;}
+        33%{width:133px}
+        66%{width:166px}
+        100%{width:200px}
+    }
+
+    animation은 단축속성, 하위 속성들을 이용해서 제어
+    -name : 키프레임 이름                   -direction : 동작 진행 방향
+    -duration : 애니메이션 지속시간           -iteration-count : 반복 횟수
+    -delay : 애니메이션 시작 전 시간           -fill-mode : 전후 상태 설정
+    -timing-function : 속도 그래프          -play-state : 애니메이션 적용 여부
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta
+        http-equiv="x-ua-compatible"
+        content="IE=edge"
+        >
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>Animation</title>
+        <style>
+            .eyes{
+                width: 480px;
+                margin: auto;
+            }
+            .eye{
+                width: 200px;
+                height: 200px;
+                border: 5px solid black;
+                border-radius: 100px;
+                position: relative;
+            }
+            .eye:nth-child(1){ float: left; }
+            .eye:nth-child(2){ float: right; }
+
+            .ball{
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                border-radius: 25px;
+                position: absolute;
+                top: 80px;
+                left: 30px;
+
+                animation-name: moving;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-play-state: running;
+                /*
+                    animation a b c d e f
+                    이름, 시간, 지연시간, 타이밍펑션, 반복, 방향, 현재상태
+                */
+            }
+            .ball:hover{
+                animation-play-state: paused;
+            }
+
+            @keyframes moving {
+                from{ left: 30px; }
+                to{ left: 120px; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="eyes">
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </body>
+</html>
