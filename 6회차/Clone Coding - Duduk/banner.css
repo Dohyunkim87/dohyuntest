@@ -3,7 +3,7 @@
     align-items: center;
     background-color: #e5f5fd;
     margin: 2.75rem 0 4rem;
-    padding: 0; /* padding을 0으로 설정 */
+    padding: 1rem; /* padding을 0으로 설정 */
     width: 100%; /* width를 100%로 설정 */
 }
 .banner__text {
