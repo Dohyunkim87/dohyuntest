@@ -1,0 +1,44 @@
+.banner{
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5f5fd;
+    margin: 2.75rem 0 4rem;
+    padding: 0; /* padding을 0으로 설정 */
+    width: 100%; /* width를 100%로 설정 */
+}
+.banner__text {
+    line-height: 1.3;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin: 0 0 0 0; /* margin을 0으로 설정 */
+    margin-right: 10px;
+}
+.banner__button {
+    margin: 0; /* margin을 0으로 설정 */
+    padding: 0.5rem 0.625rem;
+    line-height: 1.4;
+    font-size: 0.875rem;
+    background-color: coral;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .banner{
+        display: block;
+    }
+    .banner__text{
+        line-height: 1.3;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .banner__button{
+        flex-direction: column;
+        margin: 0.75rem 0 0; /* 이 코드를 추가하세요. */
+    }
+    .banner__button{
+        order: 2; /* order를 2로 설정 */
+    }
+}

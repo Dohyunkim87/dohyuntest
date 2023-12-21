@@ -36,7 +36,7 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px){
+@media (max-width: 768px) {
     .notice{
         padding: 0 1rem 1.25rem;
     }
@@ -46,7 +46,10 @@
         font-size: 1.25rem;
         margin: 2.5rem 0 1.5rem;
     }
-    .notice__item {
-        display: none;
+    .notice__container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
     }
 }
