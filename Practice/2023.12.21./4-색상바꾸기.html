@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+            }
+        #whiteBtn {
+            background-color: white;
+            color: black;
+            }
+
+        #blackBtn {
+            background-color: black;
+            color: white;
+            }
+
+        #pinkBtn {
+            background-color: pink;
+            color: black;
+            }
+
+        #greenBtn {
+            background-color: green;
+            color: white;
+            }
+        #mainContent {
+            height: 1200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            }
+
+    </style>
+    <body>
+        <button id="whiteBtn">White</button>
+        <button id="blackBtn">Black</button>
+        <button id="pinkBtn">Pink</button>
+        <button id="greenBtn">Green</button>
+        <div id="mainContent"></div>
+
+        <script>
+            const whiteBtn = document.getElementById('whiteBtn');
+            const blackBtn = document.getElementById('blackBtn');
+            const pinkBtn = document.getElementById('pinkBtn');
+            const greenBtn = document.getElementById('greenBtn');
+            const mainContent = document.getElementById('mainContent');
+            whiteBtn.addEventListener('click', function() {
+                mainContent.style.backgroundColor = 'white';
+                });
+
+            blackBtn.addEventListener('click', function() {
+                mainContent.style.backgroundColor = 'black';
+                });
+
+            pinkBtn.addEventListener('click', function() {
+                mainContent.style.backgroundColor = 'pink';
+                });
+
+            greenBtn.addEventListener('click', function() {
+                mainContent.style.backgroundColor = 'green';
+                });
+
+
+        </script>
+    </body>
+</html>

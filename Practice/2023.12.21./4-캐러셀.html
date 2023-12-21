@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+        <style>
+    #carouselContainer {
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    #carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carouselItem {
+      width: 400px;
+      height: 300px;
+    }
+
+    #controls {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+    }
+
+    button {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    body.darkMode #darkModeBtn {
+      background-color: white;
+      color: black;
+    }
+
+    body.darkMode #autoBtn {
+      background-color: white;
+      color: black;
+    }
+    body.darkMode {
+      background-color: black;
+      color: white;
+    }
+        </style>
+    </head>
+    <body>
+        <div id="carouselContainer">
+            <div id="carousel">
+              <div class="carouselItem"><img src="image/1.jpeg" width="400" height="300"></div>
+              <div class="carouselItem"><img src="image/2.jpeg" width="400" height="300"></div>
+              <div class="carouselItem"><img src="image/3.jpeg" width="400" height="300"></div>
+              <div class="carouselItem"><img src="image/4.jpeg" width="400" height="300"></div>
+              <div class="carouselItem"><img src="image/5.jpeg" width="400" height="300"></div>
+            </div>
+          </div>
+        <div id="controls">
+            <button id="darkModeBtn">흰화면</button>
+            <button id="autoBtn">자동</button>
+            <button class="fightBtn" data-index="0">F</button>
+            <button class="fightBtn" data-index="1">I</button>
+            <button class="fightBtn" data-index="2">G</button>
+            <button class="fightBtn" data-index="3">H</button>
+            <button class="fightBtn" data-index="4">T</button>
+            <button id="nextBtn">다음</button>
+          </div>
+        <script src="4-캐러셀.js"></script>
+    </body>
+</html>
