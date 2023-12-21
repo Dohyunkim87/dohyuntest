@@ -1,0 +1,60 @@
+<!-- 
+    콘솔은 브라우저의 디버깅 콘솔을 의미한다.
+    콘솔은 브라우저 안에 내장된 브라우저의 하위 객체이므로 아래와 같이 접근가능하다
+    window.console
+    웹브라우저의 개발자 도구를 열면 콘솔 항목이 있는데, 그곳이 디버깅 콘솔
+    거기에서 자바스크립트의 동작여부를 확인할 수 있다
+
+    웹브라우저를 칭하는 window. 을 제외하더라도 브라우저에 지시하는 것으로 간주한다.
+
+    console.log(x) 명령문은 디버깅 콘솔에게 콘솔창에 x 라고 작성해줘!
+    x는 자바스크립트 문법으로 표현가능한 데이터만
+
+    자바스크립트에는 데이터를 표현할 때 사용하는 형식을 자료형이라고 부른다.
+
+    주요 자료형
+    숫자, 문자열, 불리언, 여러 목적의 형태와 객체
+
+    숫자는 정수와 실수로 구분해서 표기하면 된다.
+    숫자는 산술연산이 가능하고, 결과값을 반환한다.
+    
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>콘솔 출력 & 자료형 개념 소개</title>
+    </head>
+    <body>
+        
+        <script>
+            // 정수
+            window.console.log(-10)
+            window.console.log(0)
+            console.log(10)
+
+            // 실수
+            console.log(-2.3)
+
+            // 산술연산
+            // 반환 : 명령문이 결과값처럼 사용되는 것
+            console.log(10+2)
+            console.log(10/3)
+            console.log(10.0/2.0)
+            console.log(10%3)
+            console.log(1 + 2 * 3)
+
+            // 산술 연산이 늘어져 있을 경우, 괄호 내 우선, 곱하기/나누기, 더하기/빼기의 순서로
+            console.log(1+2*3)
+            console.log(typeof 3)
+
+        </script>
+    </body>
+</html>

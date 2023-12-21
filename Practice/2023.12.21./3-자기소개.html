@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+        <style>
+            #hobby{
+                color: red;
+                font-weight: 900;
+            }
+            #name{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1 id="name"></h1>
+        <p id="hobby"></p>
+        <p id="song"></p>
+
+        <script>
+            const nameElement = document.querySelector("#name")
+            let name = prompt("당신의 이름은?")
+            nameElement.textContent = name
+
+            const hobbyElement = document.querySelector("#hobby")
+            let hobby = prompt(`${name}씨 당신의 취미는?`)
+            hobbyElement.textContent = `${name}씨 당신의 취미는 ${hobby}이군요.`
+
+            const songElement = document.querySelector("#song")
+            let song = prompt(`${name}씨 당신이 좋아하는 노래는 무엇입니까?`)
+            songElement.textContent = `${hobby} 취미이신 ${name}님 ${song} 노래를 좋아하시나요?`
+
+
+        </script>
+    </body>
+</html>

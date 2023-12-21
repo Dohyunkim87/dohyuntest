@@ -1,0 +1,47 @@
+<!-- 
+    템퍼럴 리터럴은 문자열을 표현하는 다른 방법
+    백틱으로 입력할 수 있다.
+    "", '', ``
+    백틱은 영어일때 물결(돈표시)누르면 된다.
+
+    const str1 = ''
+    const str2 = ""
+    const str3 = ``
+
+    템플릿 리터럴은 반환값이 존재하는 자바스크립트 코드(표현식)을 내장할 수 있는 문자열 표현법
+    백틱으로 지정하게 문자열 등에 되면 외부 값을 삽입할 수 있다.
+
+    const str =`그렇다면 이건 될까? ${prompt('이게될까?')}`
+    console.log(str)
+    >> 가능하다.
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        
+        <script>
+            const dog = "강아지"
+            const cat = `고양이`
+            console.log(typeof dog)
+            console.log(typeof cat)
+
+            const modifier = "귀여운"
+            const prettyDog = `${modifier} ${dog} 짱조아!`
+            console.log(prettyDog)
+
+            const prettyPet = `${modifier} ${prompt("좋아하는 동물은?")}`
+
+            console.log(prettyPet)
+        </script>
+    </body>
+</html>

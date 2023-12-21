@@ -1,0 +1,48 @@
+<!-- 
+    자바에서 문자열은 기호의 순차 수열을 뜻한다.
+    다양한 기호를 조합해 만들 수 있는 기호의 집합(문자, 숫자, 특문)
+    따옴표로 묶는다 ('', "")
+    let string1 = '문자열은 기호가 들어간다'
+    let string2 = '12345...!?'
+    문자열도 더하기 연산이 가능한데, 더하기 연산을 하면 이어붙이기를 수행한다
+    let singer = '버즈'
+    let sing = '겁쟁이'
+    singer + sing = 버즈 겁쟁이
+
+    prompt(x) 메소드는 사용자로부터 문자열을 입력받을 수 있는 다이얼로그 박스를 열어준다
+    x에는 다이얼로그 박스에 띄울 메시지를 설정할 수 있다
+
+    const data = prompt("아무거나 쓰세요!");
+    라고 하면 프롬프트 아무거나 쓰세요가 data의 상수값이 되는 것이 아니고, 프롬프트가 열린다.
+    이후 입력한 값이 반환되고, 그 반환된 값이 const로 data에 지정된다.
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        
+        <script>
+            let apple;
+            apple = "사과"
+            console.log(apple)
+            console.log("사과")
+            let banana = '바나나'
+            console.log(apple+" "+banana)
+
+            let answer = prompt("안녕하세요 잘있어요 다시만나요")
+            alert(answer)
+
+            // 프롬프트에서 취소를 누르면 null 반환되지 않는다.
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!-- 
+    렌더링 : html언어를 웹브라우저에 가시화 시켜주는 것
+    웹브라우저는 html 코드를 해석해서 요소들을 트리형태로 구조화해서 표현하는 문서(객체)를 생성한다
+    이를 DOM이라고 하며, 브라우저는 DOM을 통해 화면에 웹 콘텐츠들을 렌더링
+    Document Object Model (DOM)
+    DOM에 접근하는 방법은
+    window.document 랜더링 되고 있는 문서를 의미하는데, 이 개체의 속성을 이용하면 해당 문서에 접근가능
+    window.document는 페이지 콘텐츠, DOM에 대한 진입점 역할을 하는 프로그래밍 인터페이스
+
+    querySelector 메소드는 선택자를 인자로 전달받아, 전달받은 선택자와 일치하는 문서 내 첫번째 요소를 반환한다
+    없으면 null 처리
+    document.querySelector("p") // p 태그를 선택
+    document.querySelector("#text") // id가 text인 요소를 선택
+    document.querySelector(".text") // class가 text인 요소를 선택
+
+    textContent 속성은 해당 객체(요소)가 포함하고 있는 텍스트 콘텐츠를 표현하는 속성
+    textContent를 통해 요소가 포함한 텍스틀 읽고, 변경이 가능
+    
+    const p = document.querySelector("p") // p 요소를 반환받아 상수로 이름 붙이기
+    console.log(p.textContent) // p 요소의 textContent 속성을 콘솔에 출력
+    p.textContent = "텍스트변경" // p 요소의 텍스트 값을 변경
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        <p>사과는 맛있어</p>
+        <p class="comment">맛있는건 바나나</p>
+        <p class="comment" id="long">바나나는 길다</p>
+
+        <script>
+            // // 입력 - 처리 - 출력
+            // const p = window.document.querySelector("p") // 선택
+            // console.log(p.textContent) // 입력
+            // p.textContent="족발은 맛있어" // 입력, 출력
+            // console.log(p.textContent)
+
+            const p1 = document.querySelector("p")
+            const p2 = document.querySelector(".comment")
+            const p3 = document.querySelector("#long")
+
+            console.log(p1.textContent)
+            console.log(p2.textContent)
+            console.log(p3.textContent)
+            
+            p1.textContent = "족발은 맛있어"
+            p2.textContent = "맛있는건 삼겹살"
+            p3.textContent = "삼겹살은 길어"
+
+        </script>
+    </body>
+</html>

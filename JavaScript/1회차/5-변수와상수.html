@@ -1,0 +1,91 @@
+<!-- 
+    let 변수이름 = 데이터;
+    변수가 생성된 후에는 변수이름을 데이터 대신해서 사용할 수 있다
+
+    변수의 선언 및 초기화
+    변수를 만드는 방법을 변수의 선언이라고 말하고, 만들어진 변수에 첫 데이터를 지정하는 것을 변수의 초기화 라고 부른다.
+    동시에, 따로도 진행이 가능하다
+
+    let 변수이름;  // 변수 선언
+    변수이름 = 데이터;  // 변수 초기화
+
+    변수는 한번에 하나의 데이터만 기억할 수 있지만, 변수에 들어있는 데이터를 계속 바꿀 수 있다.
+    let 개똥 = 약; // 변수 선언과 동시에 초기화 진행
+    개똥 = 쓰다; // 새로운 데이터 대입
+    개똥 = 약아니다; // 새로운 데이터 또 대입
+
+    변수의 이름은 제약사항이 있다. (자유로우나 정하는 것이 좋다)
+    변수명에는 문자, 숫자, 기호중 $ _ 두가지만 가능
+    변수명에 처음으로는 숫자가 올 수 없다.
+    이미 다른 뜻을 갖고 있는 단어는 변수명으로 사용할 수 없다.
+
+    변수에는 값을 대입하는데, 연산자로 넣는다
+    a=b : 값 b를 변수 a에 대입
+    a += b : 변수 a 값에 b를 더한 결과를 a에 대입
+    a += b : 변수 a 값에 b를 뺀 결과를 a에 대입
+    a += b : 변수 a 값에 b를 곱한 결과를 a에 대입
+    a += b : 변수 a 값에 b를 나눈 결과를 a에 대입
+    
+    상수는 수식에서 변하지 않는 값을 의미한다.
+    지정한 이후에는 변경이 불가능하다
+    const 상수이름 = 데이터;
+    변수처럼 똑같이 사용가능, 이름생성규칙은 변수 이름 생성 규칙과 같다.
+
+    상수를 만들게 될떄는 선언과 동시에 초기화를 해주어야 한다.
+    왜냐하면 상수를 이미 만들면, 빈데이터가 상수에 지정되기 때문에, 선언과 초기화 동시에!
+
+    const 상수이름;
+    let 상수이름 상수;   // 에러발생
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>변수와 상수</title>
+    </head>
+    <body>
+        
+        <script>
+            /*
+             만약에 숫자를 5 세번 출력하다 7로 바꾼다면. 각 num 자리를 모두 바꿔야 하지만
+             밑처럼 선언을 하면 변수만 변경하면 모든 값이 변경 가능하다
+            */
+            let num = 7
+            console.log(num)
+            console.log(num)
+            console.log(num)
+
+            let number;
+            number = 10;
+            console.log(number)
+
+            number = 18;
+            console.log(number)
+
+            number += 1;
+            console.log(number)
+
+            number -= 2;
+            console.log(number)
+
+            number *= 3;
+            console.log(number)
+
+            number /= 4;
+            console.log(number)
+
+            const constnumber=18
+            console.log(constnumber)
+
+            const age = 20
+            alert(age)
+
+        </script>
+    </body>
+</html>
