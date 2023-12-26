@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        
+        <script>
+            console.log("1번별")
+            for (let i = 1; i <= 5; i++) {
+                let stars1 = '';
+                for (let j = 0; j < i; j++) {
+                    stars1 += '*';
+                }
+                console.log(stars1);
+            }
+
+            console.log("2번별")
+            for (let i = 5; i >= 1; i--) {
+                let stars2 = '';
+                for (let j = 0; j < i; j++) {
+                    stars2 += '*';
+                }
+                console.log(stars2);
+            }
+            
+            console.log("3번별")
+            for (let i = 1; i <= 5; i++) {
+                let stars1 = '';
+                for (let j = 0; j < i; j++) {
+                    stars1 += '*';
+                }
+                console.log(stars1);
+            }
+            for (let i = 5; i >= 1; i--) {
+                let stars2 = '';
+                for (let j = 0; j < i; j++) {
+                    stars2 += '*';
+                }
+                console.log(stars2);
+            }
+            
+            console.log("4번별")
+                const totalRows = 9;
+                const middleRow = Math.floor(totalRows / 2);
+                const maxStars = 9;
+
+                for (let i = 0; i < totalRows; i++) {
+                let numStars = i <= middleRow ? 2 * i + 1 : 2 * (maxStars - i - 1) + 1;
+                let numSpaces = Math.abs(middleRow - i);
+
+                let row = ' '.repeat(numSpaces) + '*'.repeat(numStars);
+                console.log(row);
+                }
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>100에서 500까지 4의 배수 출력하기</title>
+    </head>
+    <body>
+        <div id="multipleof4"></div>
+        <script>
+        
+        const outputDiv = document.getElementById('multipleof4');
+        let count = 0;
+
+        for (let i = 100; i <= 500; i++) {
+            if (i % 4 === 0) {
+                console.log(i);
+                outputDiv.innerHTML += i + '&nbsp'
+                count++;
+                if (count % 5 === 0) {
+                    outputDiv.innerHTML += '<br>'
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
