@@ -1,0 +1,78 @@
+<!-- 
+    input, select처럼 사용자로부터 입력을 받는데 사용 되는 요소들이 있다.
+    여기에서 사용자가 입력한 값을 읽어들일 때는 요소의 value 속성에 접근하자
+
+    요소에 쓰여 있는 텍스트에 접근하고 싶다 : textContent
+    사용자가 직접 요소에 입력한 값에 접근하고 싶다 : value
+
+    입력 요소의 value에 접근하여 할 수 있는 일은 읽기와 쓰기
+    console.log(target.value) // target의 value 입력값을 "읽어서" 콘솔에 출력
+    target.value = "변경값" // target의 value 입력값을 변경값으로 다시 "써서" 바꾸자
+
+    form 요소
+    여러 입력 요소를 포함할 수 있는 폼 요소로부터 여러 입력 값을 읽어들일 때는
+    개별 입력요소의 name 속성값을 토대로 입력값에 접근할 수 있ㄷ다.
+    ex)
+    <form>
+        <input name="이름" />
+        <input name="별명" />
+        <input type="submit" />
+    </form>
+    =>
+    const form = documnet.querySelector("form")
+    form.addEventListener("submit", function(e)){
+        console.log(e.target.이름.value)
+        console.log(e.target.별명.value)
+    }
+ -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>value 속성</title>
+    </head>
+    <body>
+
+        <input id="talk">
+        <input id="push" type="button" value="push">
+
+        <form id="form">
+            <input name="name">
+            <input name="nick">
+            <input type="submit">
+        </form>
+        
+        <script>
+            /*
+            const input = document.getElementById("talk")
+            const button = document.getElementById("push")
+
+            input.addEventListener("keyup", function(e){
+                console.log(e.target.value)
+            })
+
+            button.addEventListener("click", function(){
+                const p = document.createElement("p")
+                p.textContent = input.value
+                document.body.append(p)
+            })
+            */
+
+            const form = document.getElementById("form")
+            form.addEventListener("submit",function(event){
+                event.preventDefault()
+                const p = document.createElement("p")
+                p.textContent = `${event.target.name.value}의
+                별명은 ${event.target.nick.value}`
+                document.body.append(p)
+            })
+        </script>
+    </body>
+</html>

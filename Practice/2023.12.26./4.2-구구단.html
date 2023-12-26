@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>구구단</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+            td:hover{
+                transform: scale(1.2);
+                color:brown;
+                font-weight: 500;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>구구단</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>1단</th>
+                    <th>2단</th>
+                    <th>3단</th>
+                    <th>4단</th>
+                    <th>5단</th>
+                    <th>6단</th>
+                    <th>7단</th>
+                    <th>8단</th>
+                    <th>9단</th>
+                </tr>
+            </thead>
+            <tbody id="multiplicationTable">
+                <!-- JavaScript에서 구구단 내용이 채워질 자리 -->
+            </tbody>
+        </table>
+        <script>
+            const tableBody = document.getElementById('multiplicationTable');
+
+            for (let i = 1; i <= 9; i++) {
+                const row = document.createElement('tr');
+
+                for (let j = 1; j <= 9; j++) {
+                    const cell = document.createElement('td');
+                    cell.textContent = `${j} * ${i} = ${j * i}`;
+                    row.appendChild(cell);
+                }
+
+                tableBody.appendChild(row);
+            }
+            
+        </script>
+    </body>
+</html>

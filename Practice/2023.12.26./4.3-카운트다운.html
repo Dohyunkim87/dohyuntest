@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        <div id="currentTime"></div>
+        <div id="remainingTime"></div>  
+        <script>
+            const now = new Date();
+            document.getElementById("currentTime").innerText = "현재 시간: " + now.toLocaleString("ko-KR");
+
+            const futureDate = new Date("2023-12-31T23:59:59.999Z");
+            const timeDifference = futureDate - now;
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            const milliseconds = timeDifference % 1000;
+
+            document.getElementById("remainingTime").innerText =
+            `2023년 12월 31일 23:59:59.999까지 남은 시간: ${days}일 ${hours}시간 ${minutes}분 ${seconds}초 ${milliseconds}밀리초`;
+
+            function refreshPage() {
+            location.reload();
+            }
+            setInterval(refreshPage, 1000);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!-- 
+    웹프로그래밍에서 이벤트란, DOM에서 발생하는 다양한 액션 또는 상호작용을 말한다
+    버튼 클릭 : 클릭 이벤트
+    키보드 누름 : 키다운 이벤트
+    입력폼 제출 : 제출 이벤트
+    등 이용자들이 맞는 상황들
+
+    이벤트 핸들러 : 이벤트 핸들러는 이벤트가 발생되면 실행될 코드 블록을 말하며, 주로 함수를 말한다.
+    버튼 클릭시 경고 다이얼로그 박스를 띄워 환영의 메시지가 나오게 하는 이벤트 예시
+    const handleclick = function(){
+        window.alert("Welcome")
+    }
+    const button = document.querySelector("button")
+    buton.onclick = handleClick
+
+    이벤트를 처리할 타겟을 선택하고, 이벤트 핸들러 속성에 이벤트 핸들러를 대입한다.
+    함수 호출은 ()이 필요하지만, 이벤트 핸들러에 함수를 대입하는 것에는 ()이 불필요하다.
+    
+    onclick, onkeydown보다 편리한 방법은 addEventListener이 좋다
+    이전에 추가한 이벤트 핸들러를 제거할 수 있는 대응 메소드가 존재한다.
+    같은 리스너(타겟)에 대해 다수의 핸들러를 등록할 수 있다.
+    
+    이벤트 객체는 추가적인 기능과 정보를 제공하기 위해 이벤트 핸들러에 자동으로 전달되는 데이터
+    이벤트 핸들러 함수에 매개변수를 추가하여 이벤트 발생 시마다 전달받을 수 있도록 해야함
+
+    target.addEventListener('click', function(){})
+
+    target.addEventListener('click', function(event){})
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>이벤트 & 이벤트 핸들링</title>
+    </head>
+    <body>
+        
+        <button id="span">SPAN</button>
+        <button id="strong">STRONG</button>
+        <button id="mark">MARK</button>
+        <hr>
+
+        <script>
+            const spanBtn = document.getElementById("span")
+            const strongBtn = document.getElementById("strong")
+            const markBtn = document.getElementById("mark")
+
+            const handleClick = function(event){
+               if(event.target.id == "span"){
+                const span = document.createElement("span")
+                span.textContent = "span tag"
+                document.body.append(span)
+               }else if(event.target.id == "strong"){
+                const strong = document.createElement("strong")
+                strong.textContent = "strong tag"
+                document.body.append(strong)
+               }else if(event.target.id == "mark"){
+                const mark = document.createElement("mark")
+                mark.textContent = "mark tag"
+                document.body.append(mark)
+               }
+            }
+
+            // function handleClick(){
+            //     alert("Clicked!")
+            // }
+            // spanBtn.onclick = handleClick
+
+            // spanBtn.onclick = function(){
+            //     const span = document.createElement("span")
+            //     span.textContent = "Newly generated span tag!"
+            //     document.body.append(span)
+            // }
+
+            // spanBtn.addEventListener("click", function(){
+            //     const span = document.createElement("span")
+            //     span.textContent = "Newly generated span tag!"
+            //     document.body.append(span)
+            // })
+
+            spanBtn.addEventListener("click", handleClick)
+            strongBtn.addEventListener("click", handleClick)
+            markBtn.addEventListener("click", handleClick)
+        </script>
+    </body>
+</html>

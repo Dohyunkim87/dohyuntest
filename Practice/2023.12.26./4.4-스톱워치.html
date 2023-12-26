@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>스톱워치</title>
+        <style>
+            h1{
+                color:greenyellow;
+                font-weight: 700;
+            }
+            button:hover{
+                transform: scale(1.5);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>⏰Stopwatch⏰</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+        <p id="display">00:00:00:00</p>
+      
+        <script>
+          function updateStopwatch() {
+            setInterval(function() {
+                if (stopwatch.running) {
+                stopwatch.elapsedTime = Date.now() - stopwatch.startTime;
+                stopwatch.updateDisplay();
+                }
+            }, 10);
+            }
+
+          let stopwatch = {
+            startTime: null,
+            endTime: null,
+            running: false,
+            elapsedTime: 0,
+            
+            start() {
+            if (!this.running) {
+                this.startTime = Date.now() - this.elapsedTime;
+                this.running = true;
+                this.updateDisplay();
+                updateStopwatch();
+            }
+            },
+      
+            stop() {
+              if (this.running) {
+                this.endTime = Date.now();
+                this.running = false;
+                this.elapsedTime = this.endTime - this.startTime;
+                this.updateDisplay();
+              }
+            },
+      
+            reset() {
+              this.startTime = null;
+              this.endTime = null;
+              this.running = false;
+              this.elapsedTime = 0;
+              this.updateDisplay();
+            },
+      
+            updateDisplay() {
+                let elapsedTimeString = this.formatTime(this.elapsedTime);
+                let milliseconds = Math.floor((this.elapsedTime % 1000) / 10); // 밀리초 계산
+                elapsedTimeString += `:${milliseconds < 10 ? '0' + milliseconds : milliseconds}`; // 밀리초 추가
+                document.getElementById("display").innerHTML = elapsedTimeString;
+            },
+      
+            formatTime(milliseconds) {
+              let seconds = Math.floor(milliseconds / 1000);
+              let minutes = Math.floor(seconds / 60);
+              let hours = Math.floor(minutes / 60);
+      
+              seconds = seconds % 60;
+              minutes = minutes % 60;
+              hours = hours % 24;
+      
+              let formattedTime =
+                (hours < 10 ? "0" + hours : hours) +
+                ":" +
+                (minutes < 10 ? "0" + minutes : minutes) +
+                ":" +
+                (seconds < 10 ? "0" + seconds : seconds);
+      
+              return formattedTime;
+            }
+          };
+      
+          document.getElementById("start").addEventListener("click", function() {
+            stopwatch.start();
+          });
+      
+          document.getElementById("stop").addEventListener("click", function() {
+            stopwatch.stop();
+          });
+      
+          document.getElementById("reset").addEventListener("click", function() {
+            stopwatch.reset();
+          });
+        </script>
+      </body>
+</html>

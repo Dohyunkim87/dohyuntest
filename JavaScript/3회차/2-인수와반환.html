@@ -1,0 +1,72 @@
+<!-- 
+    함수 호출문은 '함수명+소괄호'
+    소괄호의 역할은 중요한 역할을 하고 있고, 함수가 실행될 때 사용할 재료를 전달받는 것
+    재료는 데이터를 뜻하며, 이렇게 전달되는 데이터를 가리켜 '인수(argument)'라 한다.
+    인수를 전달받아 기능을 수행하는 만들때는 함수 정의 시 매개변수를 추가해야한다.
+    이는 함수의 기능을 다양화시킨다.
+
+    function sayVegetable(vegetable){
+        console.log("함수에 전달된 채소?")
+        console.log(vegetable)
+    }
+
+    sayVegetable(당근)
+    함수에 전달된 채소는?
+    당근
+
+    함수 정의시에는 매개변수를 원하는 만큼 추가할 수 있다. 2개 이상을 사용할 경우에는 각각을 쉼표로 구분해야한다
+
+    함수를 만들때, 함수가 데이터를 반환하도록 할 수 있다.
+    함수호출문이 데이터로 대체된다는 것을 의미한다
+
+    function getThree(){
+        return 3;
+    }
+
+    console.log(3)=console.log(getThree())
+
+    return 키워드는 데이터 반환 및 함수 강제 종료를 의미한다
+ -->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>인수 & 반환 </title>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script>
+
+            function createParagraph(content, color){
+                const p = document.createElement("p")
+                p.textContent = content
+                p.style.color = color
+                document.querySelector("#container").append(p)
+                
+                return `방금 만든 태그의 콘텐츠 : ${content}, 색상 : ${color}`
+            }
+
+            console.log(createParagraph("첫번째 와우", "red"))
+            createParagraph("두번째 호드를 위하여", "green")
+            createParagraph("마지막 아이어를 위하여", "blue")
+
+            // function sample(){
+            //     console.log("반환기능 테스트")
+
+            //     return "짠"
+            // }
+
+            // console.log(sample())
+
+        </script>
+    </body>
+</html>
