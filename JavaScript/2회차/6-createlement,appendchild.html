@@ -1,0 +1,13 @@
+<!-- 
+    document.createElement('div' / 'p' / 'a')
+    이렇게 한다고 해서 div, p, a 요소가 추가되지는 않음
+    그렇다면 요소는 어떻게 추가?
+    append(), appendchild()를 통해 DOM 내 개별요소(노드)에 자식요소를 추가한다
+    target.appendChild(자식으로_추가할_요소)
+    ex)
+    const p = document.createElement("p")
+    document.body.appendChild(p)
+    append vs appendChild
+    요소에 노드객체, 문자 추가가능 // 요소에 노드객체만 추가가능
+    자식노드 미반환 // 자식노드 반환
+ -->
