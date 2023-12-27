@@ -1,0 +1,72 @@
+<!-- 
+    타이머관련 기능들 중 3가지 정도만 소개
+
+    1. setTimeout(실행할_함수, ms_단위의_시간)
+
+        setTimeout(function(){
+            console.log("재미있다!")
+        }, 1000)  //  1000ms 이후에 재미있다! 를 콘솔로그 띄움
+
+    2. setInterval(반복_실행할_함수, ms_단위의_시간)
+
+        setInterval(function(){
+            console.log("안녕!")
+        }, 500)  //  500ms 마다 안녕! 를 콘솔로그 띄움
+
+    3. clearInterval(함수_타이머)
+    
+        let timer;
+        timer = setInterval(function(){
+            console.log("안녕!")
+        }, 500)
+
+        clearInterval(timer)  //  500ms 마다 작동하는 timer를 멈춤
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>타이머 메소드</title>
+    </head>
+    <body>
+        
+        <p id="now"></p>
+        <button id="stop">멈춰!</button>
+
+        <script>
+            // setTimeout(function(){
+            //     alert("Time out!")
+            // },3000)
+            const button = document.getElementById("stop")
+
+            let timerId;
+            timerId = setInterval(function(){
+
+                const p =document.getElementById("now")
+
+                const now = new Date()
+                // const then = new Date(1992, 11, 12, 12, 30, 45)
+                let year = now.getFullYear()
+                let month = now.getMonth() + 1 
+                let day = now.getDate()
+                let hour = now.getHours()
+                let min = now.getMinutes()
+                let sec = now.getSeconds()
+                let mil = now.getMilliseconds()
+
+                p.textContent = `${year}/${month}/${day} ${hour}:${min}:${sec}:${mil}`
+
+            },100)
+
+            button.addEventListener("click", function(){
+                clearInterval(timerId)
+            })
+        </script>
+    </body>
+</html>

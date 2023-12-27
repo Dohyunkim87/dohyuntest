@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dohyun Kim">
+    <meta name="description" content="Practice Page">
+    <meta name="keywords" content="Study, HTML, Practice">
+    <title>가위바위보</title>
+</head>
+<body>
+    <h1>가위바위보 게임</h1>
+    <button onclick="playGame('가위')">가위</button>
+    <button onclick="playGame('바위')">바위</button>
+    <button onclick="playGame('보')">보</button>
+
+    <p id="result"></p>
+
+    <script>
+        function computerChoice() {
+            const choices = ['가위', '바위', '보'];
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choices[randomIndex];
+        }
+
+        function playGame(userChoice) {
+            const computer = computerChoice();
+            const resultDisplay = document.getElementById('result');
+
+            let resultMessage = '';
+
+            if (userChoice === computer) {
+                resultMessage = '무승부입니다!';
+            } else if (
+                (userChoice === '가위' && computer === '보') ||
+                (userChoice === '바위' && computer === '가위') ||
+                (userChoice === '보' && computer === '바위')
+            ) {
+                resultMessage = '사용자 승리!';
+            } else {
+                resultMessage = '컴퓨터 승리!';
+            }
+
+            resultDisplay.textContent = `사용자: ${userChoice}, 컴퓨터: ${computer}. ${resultMessage}`;
+        }
+    </script>
+</body>
+</html>

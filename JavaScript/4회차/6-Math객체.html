@@ -1,0 +1,48 @@
+<!-- 
+    대문자이지만, 내장 객체이다.
+    new Math() : 작동 안됨!
+
+    Math.메소드()
+    Math.속성
+
+    Math의 메소드 또는 속성
+    abs, floor, pow, random, sign, sqrt
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        
+        <button id="draw">Draw</button>
+        <p id="number"></p>
+        <script>
+            const button = document.getElementById("draw")
+            const p = document.getElementById("number")
+
+            // console.log(Math.sqrt(2))
+            // console.log(Math.abs(-4))
+
+            // console.log(Math.random())  // 0~1 랜덤숫자를 반환
+
+            let rn = Math.random()
+            // Math.floor()  //  주어진 숫자에서 소수점 이하를 제거하고 반환
+            // console.log(Math.floor(rn*10) + 1)  //  1~10의 숫자만 나오게 된다
+
+            const MAX_NUM = 45
+            const MIN_NUM = 1
+            button.addEventListener("click", function(){
+                p.textContent = Math.floor(Math.random() * MAX_NUM) + MIN_NUM;
+            })
+            
+        </script>
+    </body>
+</html>

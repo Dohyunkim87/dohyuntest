@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        <button onclick="addFood()">먹고 싶은 음식 추가</button>
+        <button onclick="showRecentFoods()">입력한 음식 목록 띄우기</button>
+        <button onclick="showAllFood()">입력한 음식 목록 전부 나열하기</button>
+
+        <p id="foodDisplay">입력한 음식 목록 :</p>
+        <ul id="foodList"></ul>
+
+    <script>
+        const foods = [];
+
+        function addFood() {
+            const food = prompt('먹고 싶은 음식을 입력하세요:');
+            if (food) {
+                foods.push(food);
+                updateFoodDisplay();
+            }
+        }
+
+        function showRecentFoods() {
+            if (foods.length > 0) {
+                const foodCopy = foods.slice();
+                let index = 0;
+
+                function displayFood() {
+                    if (index < foodCopy.length) {
+                        alert(foodCopy[index]);
+                        index++;
+                        displayFood();
+                    }
+                }
+
+                displayFood();
+            } else {
+                alert('입력된 음식이 없습니다.');
+            }
+        }
+
+        function showAllFood() {
+            const foodList = document.getElementById('foodList');
+            foodList.innerHTML = '';
+
+            foods.forEach(food => {
+                const li = document.createElement('li');
+                li.textContent = food;
+                foodList.appendChild(li);
+            });
+
+            const foodDisplay = document.getElementById('foodDisplay');
+            foodDisplay.textContent = '입력한 음식 목록 : ';
+        }
+        function updateFoodDisplay() {
+            const foodDisplay = document.getElementById('foodDisplay');
+            if (foods.length > 0) {
+                foodDisplay.textContent = `입력한 음식 목록 : ${foods[foods.length - 1]}`;
+            } else {
+                foodDisplay.textContent = '입력한 음식 목록 : ';
+            }
+        }
+    </script>
+    </body>
+</html>

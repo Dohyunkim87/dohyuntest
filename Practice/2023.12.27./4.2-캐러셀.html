@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dohyun Kim">
+    <meta name="description" content="Practice Page">
+    <meta name="keywords" content="Study, HTML, Practice">
+    <title>멈춰라 이미지!</title>
+    <style>
+        #imageContainer {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #imageContainer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        #controls button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer" style="background-image: url('https://img.khan.co.kr/news/2023/09/27/l_2023092801001014200092871.jpg')"></div>
+    <div id="controls">
+        <button onclick="startCarousel()">시작</button>
+        <button onclick="stopCarousel()">멈춤</button>
+    </div>
+
+    <script>
+        let imageIndex = 0;
+        let intervalId;
+
+        const images = [
+            'url("https://img.khan.co.kr/news/2023/09/27/l_2023092801001014200092871.jpg")',
+            'url("https://health.chosun.com/site/data/img_dir/2022/05/04/2022050401754_0.jpg")',
+            'url("https://cdn.thekpm.com/news/photo/202303/149984_130475_39.jpg")',
+            'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEbVe-T8LM-RWcEIwrGoOQlQUM0pbeyk0ZLQ&usqp=CAU")',
+            'url("https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg")',
+            'url("https://cdn.imweb.me/upload/S2020041334b66edb88d0c/7b46afae5359e.jpg")',
+            'url("https://gurunavi.com/ko/japanfoodie/article/sushi/img/sushi_01.jpg")',
+        ];
+
+        function changeImage() {
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.style.backgroundImage = images[imageIndex];
+
+            imageIndex = (imageIndex + 1) % images.length;
+        }
+
+        function startCarousel() {
+            if (!intervalId) {
+                intervalId = setInterval(changeImage, 500);
+            }
+        }
+
+        function stopCarousel() {
+            clearInterval(intervalId);
+            intervalId = null; 
+        }
+        window.onload = startCarousel;
+    </script>
+</body>
+</html>

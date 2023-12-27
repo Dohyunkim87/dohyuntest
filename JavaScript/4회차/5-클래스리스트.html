@@ -1,0 +1,65 @@
+<!-- 
+    classList 속서은 Element로부터 클래스 콜렉션을 반환하는 속성
+    <p class="hello greet good">
+        안녕하세요
+    </p>
+    const p = document.querySelector('p')
+    console.log(p.classList)
+    DOMTokenList(3) ['hello', 'greet', 'good', value: 'hello greet good']
+    0 : "hello"
+    1 : "greet"
+    2 : "good"
+    length : 3
+    value : "hello greet good"
+    [[Prototype]] : DOMTokenList
+    클래스 컬렉션은 유용한 메소드를 보유하고 있다
+    add, remove, item, toggle, contains, replace
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>클래스 리스트</title>
+        <style>
+            .tasty{
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="5.jpeg" alt="붕어빵">
+        <br>
+        <button id="add">Add Style</button>
+        <button id="remove">Remove Style</button>
+        <button id="toggle">Toggle Style</button>
+        <script>
+            const img = document.querySelector("img")
+            const addBtn = document.querySelector("#add")
+            const removeBtn = document.querySelector("#remove")
+            const toggleBtn = document.querySelector("#toggle")
+
+            console.log(img.classList)
+
+            addBtn.addEventListener("click", function(){
+                img.classList.add("tasty")
+                console.log(img.classList.contains("tasty"))
+            })  //  클래스 추가
+            removeBtn.addEventListener("click",function(){
+                img.classList.remove("tasty")
+                console.log(img.classList.contains("tasty"))
+            })  //  클래스 제거
+            toggleBtn.addEventListener("click",function(){
+                img.classList.toggle("tasty")
+                console.log(img.classList.contains("tasty"))  
+            })  //  클래스 제거 및 추가
+            // 이를 활용하면 특정 스타일 혹은 자바스크립트가 작동하는 환경에서 클래스에 포함/제외 가능?
+
+        </script>
+    </body>
+</html>
