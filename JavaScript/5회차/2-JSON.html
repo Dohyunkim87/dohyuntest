@@ -1,0 +1,55 @@
+<!-- 
+    JSON : JavaScript Object Notation을 뜻하며, 자바스크립트 객체 표기법이라 부른다
+    자바스크립트 객체를 문자열로 표현하는 데이터 포멧이다
+    자바스크립트에서 사용할 수 있는 객체 타입을 다른 프로그래밍 언어에서 사용할 수 있도록 한다
+    JSON은 객체 리터럴 표기법에 기반을 두고 있다
+    객체 키와 문자열을 따옴표로 묶고, 객체 전체도 백틱으로 묶어준다
+    stringify : 객체 to JSON(undefined, 함수 등은 생략되거나 null로 변환)
+    parse : JSON to 객체(작은 따옴표, 후행 쉼표는 파싱 불가한 경우도 있음)
+    
+ -->
+ 
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>자바스크립트 소개</title>
+    </head>
+    <body>
+        
+        <script>
+            // JSON 형식 : 자바스크립트 객체 리터럴을 문자열 형식으로 변환한 것
+            const meal = {
+                what : "고기",
+                who : "가족",
+                when : "어제",
+            }
+
+            const mealjson = `{
+                "what" : "고기",
+                "who" : "아내",
+                "when" : "어제"
+            }`
+            console.log(typeof meal)
+            console.log(typeof mealjson)
+
+            let sm = JSON.stringify(meal)
+            console.log(typeof meal)
+            console.log(JSON.stringify(meal))
+            console.log(typeof JSON.stringify(meal))
+
+            console.log(sm)
+            console.log(typeof sm)
+            console.log(JSON.parse(sm))
+            console.log(typeof JSON.parse(sm))
+
+            
+        </script>
+    </body>
+</html>

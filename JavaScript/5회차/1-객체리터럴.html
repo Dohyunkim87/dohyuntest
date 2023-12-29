@@ -1,0 +1,82 @@
+<!-- 
+    객체를 구성하는 속성(값이나 이름)의 이름과 실제 값을 한 쌍으로 묶어서 객체 리터럴이라 한다
+    속성의 이름을 키, 값을 밸류라 한다
+    const cat = {
+        name: "국희",
+        town: "부천"
+    }  //  name, town : key     국희, 부천 : value
+
+    객체리터럴에서 value값이 함수면, 이 속성은 메소드가 된다
+    const cat = {
+        name: "국희",
+        town: "부천",
+        eat: function(){
+            console.log("밥을 먹는다")
+        }
+        scratch: function(){
+            console.log("건드리면 할퀸다")
+        }
+    }
+    키는 중복될 수 없지만, 밸류는 동일할 수 있다
+
+    객체 안의 속성 값을 참조할 때는 도트 연산자, 대괄호 연산자를 사용할 수 있다.
+    console.log(cat.town)  //  부천
+    cat.scratch()  //  건드리면 할퀸다
+    console.log(cat['name'])  //  국희
+    cat['eat']  //  밥을 먹는다
+
+    스프레드 연산자를 사용하면 객체 리터럴의 요소 목록을 펼칠 수 있다.
+    전개 구문, 전개 연산자 등으로 불린다.
+
+    const bird = {
+        parrot: "앵무새",
+        chicken: "닭"
+    }
+
+    const animal = {
+        ...bird,
+        dog; "강아지"
+    }  //  "앵무새", "닭"이 들어간다
+
+    const pet = ["강아지","고양이"]
+    console.log(...pet)  //  복사하여 놓고 온다 
+    console.log(pet)  //  원본에는 영향이 없다
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dohyun Kim">
+        <meta name="description" content="Practice Page">
+        <meta name="keywords" content="Study, HTML, Practice">
+        <title>객체 리터럴</title>
+    </head>
+    <body>
+        
+        <script>
+            // 생성자 : 객체를 설계한 함수
+            // 객체 리터럴 : 객체를 이렇게 만들겠다는 선언
+            const cat = {
+                species : "포유류",
+                title : "고양이"
+            }
+
+            console.log(cat.species, cat.title)
+            console.log(cat["title"])
+            console.log(typeof cat)
+
+            const animal = {
+                ...cat,
+                species2 : "어류",
+                title2 : "제브라피쉬",
+                age : 5,
+                favorite: ["brineshrimp","tetrabit"]
+            }
+
+            console.log(animal)
+        </script>
+    </body>
+</html>
