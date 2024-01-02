@@ -2,7 +2,11 @@ team: oz_back
 
 coach: 성민
 
+<<<<<<< HEAD
 leader: 병철
+=======
+leader: 연경
+>>>>>>> conflict-1
 
 member:
 - 은기
